@@ -1,0 +1,4 @@
+# This folder is populated via Bower
+# Ignore everthing in here except ths file
+*
+!.gitignore
