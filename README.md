@@ -14,6 +14,8 @@ Usage
     source env/bin/activate
     pip install -r requirements.txt
     bower install
+    npm install
+    gulp
     # Write your super awesome amazing app!
     heroku login
     heroku create

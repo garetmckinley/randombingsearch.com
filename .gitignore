@@ -2,6 +2,9 @@
 __pycache__/
 *.py[cod]
 
+# Node modules
+node_modules/
+
 # Distribution / packaging
 .Python
 env/
