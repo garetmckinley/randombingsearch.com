@@ -31,6 +31,11 @@ Or you can simply fork this repo and click below. Neato!
 
 _I still reccomend you change your `SECRET_KEY` though._
 
+WTH, it looks weird on Heroku!?
+------------------------
+
+Sorry, as far as I know there is no way to run the gulp and bower tasks on Heroku so you will need to run them locally. Remember to delete `static/[components | css | js]/.gitignore` so you can commit the files.
+
 License
 -------
 
