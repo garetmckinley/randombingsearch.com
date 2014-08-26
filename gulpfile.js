@@ -5,7 +5,7 @@ var gulp = require('gulp'),
     minifyJS = require('gulp-uglify');
 
 gulp.task('default', function() {
-    gulp.src('src/css/*.less')
+    gulp.src('src/less/*.less')
     .pipe(less())
     .pipe(minifyCSS())
     .pipe(gulp.dest('static/css'));
