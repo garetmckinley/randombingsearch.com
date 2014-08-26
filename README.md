@@ -1,6 +1,8 @@
 Flask Skeleton
 ===========
 
+[![Build Status](https://travis-ci.org/aaronbassett/Flask-skeleton.svg)](https://travis-ci.org/aaronbassett/Flask-skeleton)
+
 A __really__ basic Flask app skeleton ready for deployment to Heroku.
 
 Usage
