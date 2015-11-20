@@ -16,4 +16,4 @@ gulp.task('default', function() {
     .pipe(gulp.dest('static/js'));
 });
 
-gulp.tasks('heroku:prod', [default]);
+gulp.task('heroku:prod', ['default']);
