@@ -11,5 +11,12 @@ class AppTestCase(unittest.TestCase):
         response = self.client.get("/")
         assert response.status_code == 200
 
+    def test_get_question(self):
+        response = self.client.get("/search/")
+        assert response.status_code == 200
+
+    def tearDown(self):
+        pass
+
 if __name__ == '__main__':
     unittest.main()
