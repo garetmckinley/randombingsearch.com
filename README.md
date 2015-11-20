@@ -1,42 +1,12 @@
-Flask Skeleton
+randombingsearch.com [![Build Status](https://travis-ci.org/mediachicken/randombingsearch.com.svg?branch=master)](https://travis-ci.org/mediachicken/randombingsearch.com)
 ===========
 
-[![Build Status](https://travis-ci.org/aaronbassett/Flask-skeleton.svg)](https://travis-ci.org/aaronbassett/Flask-skeleton)
+This is the code base for randombingsearch.com. Don't worry, I fucking hate bing just as much as everybody else. I created this site as a Flask exercise and out of boredom. This site's usage is intended for use with their rewards system. The homepage will eventually feature a bookmarklet that you can use to launch a random bing search from any browser. As long as you're logged in, the searches should could as valid searches towards free gift cards.
 
-A __really__ basic Flask app skeleton ready for deployment to Heroku.
+The app is currently using jService.com's API to access the jeopardy question database. It seeds the queries with questions from the historic jeopardy database.
 
-Usage
-----
 
-    git clone git@github.com:aaronbassett/Flask-skeleton.git
-    cd Flask-skeleton
-    virtualenv env
-    source env/bin/activate
-    pip install -r requirements.txt
-    bower install
-    npm install
-    gulp
-    # Write your super awesome amazing app!
-    heroku login
-    heroku create
-    git push heroku master
-    heroku config:set S3_KEY="t8yamo017rg6*ukr+k@&l+&$3mx%4^c&^16l_i"
-    # Don't use that key though you silly-billy!
-    heroku ps:scale web=1
-    heroku open
+The site randombingsearch.com automatically gets deployed from this codebase once all tests pass. Feel free to fork, change, and pull.
 
-Or you can simply fork this repo and click below. Neato!
 
-[![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
-
-_I still reccomend you change your `SECRET_KEY` though._
-
-WTH, it looks weird on Heroku!?
-------------------------
-
-Sorry, as far as I know there is no way to run the gulp and bower tasks on Heroku so you will need to run them locally. Remember to delete `static/[components | css | js]/.gitignore` so you can commit the files.
-
-License
--------
-
-http://aaron.mit-license.org/
+Long live open source.
