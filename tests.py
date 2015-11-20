@@ -1,5 +1,5 @@
 import unittest
-from app import app
+from app import app, Question, BingBackground
 
 
 class AppTestCase(unittest.TestCase):
@@ -14,6 +14,10 @@ class AppTestCase(unittest.TestCase):
     def test_get_question(self):
         response = self.client.get("/search/")
         assert response.status_code == 200
+
+    def test_get_bingbackground(self):
+        response = Question()
+        assert response is not False
 
     def tearDown(self):
         pass
