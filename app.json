@@ -7,7 +7,7 @@
     "SECRET_KEY": {
         "description": "Required for sessions and other Flask stuffs",
         "required": true,
-        "value": "t8yamo017rg6*ukr+k@&l+&$3mx%4^c&^16l_i"
+        "value": "22cff45ee4f00792096f1dc52a2e6f128ddbf9c06c0c2b36"
     }
   }
 }
