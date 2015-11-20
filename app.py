@@ -9,8 +9,11 @@ app = Flask(__name__)
 # Fetch the secret key from our environment
 app.secret_key = os.environ.get("SECRET_KEY")
 
-# Wrap the API
+# Wrap the jService API
 jService = tortilla.wrap('http://jservice.io/api')
+
+# Wrap the Bing HPImageArchive API
+HPImageArchive = tortilla.wrap('http://www.bing.com/HPImageArchive.aspx')
 
 
 # This is the class for the home page view
@@ -20,7 +23,14 @@ class AppView(FlaskView):
 
     # This is the function that renders the home page
     def index(self):
-        return render_template('index.html')
+        response = HPImageArchive.get(params={
+            'format': 'js',
+            'idx': 0,
+            'n': 1,
+            'mkt': 'en-US'
+        })
+        image = 'http://bing.com/%s' % response['images'][0]['url']
+        return render_template('index.html', background=image)
 # Register the view with our app
 AppView.register(app)
 
