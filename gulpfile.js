@@ -1,13 +1,12 @@
 var gulp = require('gulp'),
-    less = require('gulp-less'),
+    sass = require('gulp-sass'),
     minifyCSS = require('gulp-minify-css'),
     coffee = require('gulp-coffee'),
     minifyJS = require('gulp-uglify');
 
 gulp.task('default', function() {
-    gulp.src('src/less/*.less')
-    .pipe(less())
-    .pipe(minifyCSS())
+    gulp.src('src/sass/*.scss')
+    .pipe(sass().on('error', sass.logError))
     .pipe(gulp.dest('static/css'));
 
     gulp.src('src/coffee/*.coffee')
