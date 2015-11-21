@@ -5,6 +5,9 @@
     <title>Redirecting to a random bing search...</title>
   </head>
   <body>
-    {{ question }}
+    <script type="text/javascript">
+      var question = "{{ question }}";
+    </script>
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
   </body>
 </html>
